@@ -23,6 +23,11 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'bulma-rails'
+gem 'simple_form'
+gem 'gravatar_image_tag', '~> 1.2'
+gem 'devise', '~> 4.6', '>= 4.6.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -38,6 +43,9 @@ group :development, :test do
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+  gem 'better_errors', '~> 2.4'
+  gem 'guard', '~> 2.15'
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
