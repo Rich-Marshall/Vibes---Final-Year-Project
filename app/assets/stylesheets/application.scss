@@ -14,3 +14,11 @@
  *= require_self
  */
 @import 'bulma';
+
+// rounded corners
+.image {
+  border-radius: 30%;
+img {
+  border-radius: 30%;
+  }
+}

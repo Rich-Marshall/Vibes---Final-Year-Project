@@ -4,7 +4,8 @@ class ShoutsController < ApplicationController
   # GET /shouts
   # GET /shouts.json
   def index
-    @shouts = Shout.all
+    @shouts = Shout.all.order("created_at DESC")
+    @shout = Shout.new
   end
 
   # GET /shouts/1

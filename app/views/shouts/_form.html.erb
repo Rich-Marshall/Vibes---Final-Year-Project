@@ -1,21 +1,12 @@
-<%= form_for(@shout) do |f| %>
-  <% if @shout.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@shout.errors.count, "error") %> prohibited this shout from being saved:</h2>
-
-      <ul>
-      <% @shout.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+<%= simple_form_for(@shout) do |f| %>
+ <%= f.error_notification %>
   <div class="field">
-    <%= f.label :shout %><br>
-    <%= f.text_area :shout %>
+    <div class="control">
+      <%= f.input :shout, label: "Go on, SHOUT about it!",
+        input_html: { class: "textarea "}, wrapper: false,
+        label_html: {class: "label"}, placeholder: "What do you want to shout?...",
+        autofocus: true %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+ <%= f.button :submit, class: "button is-warning" %>
 <% end %>
