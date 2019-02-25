@@ -29,7 +29,7 @@ class ShoutsController < ApplicationController
 
     respond_to do |format|
       if @shout.save
-        format.html { redirect_to @shout, notice: 'Shout was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Shout was successfully created.' }
         format.json { render :show, status: :created, location: @shout }
       else
         format.html { render :new }

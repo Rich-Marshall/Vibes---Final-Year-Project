@@ -22,3 +22,13 @@ img {
   border-radius: 30%;
   }
 }
+
+.notification:not(:last-child) {
+  margin-bottom: 0;
+}
+
+body,section {
+background-color:rgba(207, 155, 2, 0.09);
+}
+
+//LIGHT YELLOW rgba(252, 191, 7, 0.39)
