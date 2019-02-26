@@ -1,5 +1,6 @@
 class ShoutsController < ApplicationController
   before_action :set_shout, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /shouts
   # GET /shouts.json
@@ -15,7 +16,7 @@ class ShoutsController < ApplicationController
 
   # GET /shouts/new
   def new
-    @shout = Shout.new
+    @shout = current_user.shouts.build
   end
 
   # GET /shouts/1/edit
@@ -25,7 +26,7 @@ class ShoutsController < ApplicationController
   # POST /shouts
   # POST /shouts.json
   def create
-    @shout = Shout.new(shout_params)
+    @shout = current_user.shouts.build(shout_params)
 
     respond_to do |format|
       if @shout.save
