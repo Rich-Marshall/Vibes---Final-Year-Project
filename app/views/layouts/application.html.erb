@@ -9,14 +9,19 @@
 </head>
 <body>
 
+
 <% if flash[:notice] %>
-<div class="notification is-primary global-notification">
-  <p class="notice"><%= notice =%></p>
-</div>
+  <div class="notification is-primary global-notification">
+    <button class="delete"></button>
+    <p class="notice"><%= notice =%></p>
+  </div>
 <% end %>
+
+
 
 <% if flash[:alert] %>
   <div class="notification is-danger global-notification">
+    <button class="delete"></button>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
   </div>
@@ -40,10 +45,10 @@
       <div class="navbar-item">
  			  <div class="field is-grouped">
           <p class="control">
- 						<%= link_to 'Create Shout', root_path, class: "button is-warning is-inverted" %>
+ 						<%= link_to 'View Shouts', root_path, class: "button is-warning is-inverted is-rounded" %>
  					</p>
  					<p class="control">
- 						<%= link_to 'Create Event', root_path, class: "button is-warning is-inverted" %>
+ 						<%= link_to 'Create Event', root_path, class: "button is-warning is-inverted is-rounded" %>
  					</p>
           <% if user_signed_in? %>
             <p class="control">
