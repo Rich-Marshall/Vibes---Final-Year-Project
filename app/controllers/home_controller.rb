@@ -1,7 +1,4 @@
 class HomeController < ApplicationController
-  def new
-  end
-
-  def create
+  def index
   end
 end
