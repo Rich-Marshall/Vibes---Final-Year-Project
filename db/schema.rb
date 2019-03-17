@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20190312152255) do
     t.datetime "updated_at",                          null: false
     t.string   "name"
     t.string   "username"
-    t.integer  "tel"
+    t.string  "tel"
     t.string   "location"
     t.string   "genre"
     t.string   "website"

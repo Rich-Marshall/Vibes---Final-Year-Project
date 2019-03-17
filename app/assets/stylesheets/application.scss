@@ -13,13 +13,7 @@
  *= require_tree .
  *= require_self
  */
-@import 'bulma';
 
-
-
-// rounded corners
-.image {
-  border-radius: 30%;
 
 
 .center {
@@ -29,9 +23,9 @@
   }
 
 img {
-  border-radius: 30%;
+  border-radius: 5px;
   }
-}
+
 
 .notification:not(:last-child) {
   margin-bottom: 0;
@@ -44,6 +38,6 @@ height: 100%;
 }
 
 
-
+@import 'bulma';
 
 //LIGHT YELLOW rgba(241, 213, 28, 0.24)

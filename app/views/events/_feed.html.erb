@@ -1,5 +1,5 @@
 <div class="column is-half">
-    
+
 <% @events.each do | event | %>
   <div class="box">
   	<article class="media">
@@ -12,15 +12,22 @@
    			<div class="content">
    				<strong><%= event.user.name %></strong><br />
    				<small>@<%= event.user.username %></small><br/>
-          <p><%= event.name %></p>
-          <p><%= event.start_date %></p>
-          <p><%= event.end_date %></p>
-          <p><%= event.cover_img %></p>
-          <p><%= event.location %></p>
-          <p><%= event.description %></p>
-          <p><%= event.host %></p>
-   			</div>
+          <br>
+          <article class="box">
+       			<%= image_tag "beastwang_warehouse_leicester.jpg" %>
+            <div class="columns">
+              <div class="column is-one-quarter">
+                <p><%= event.start_date %> <%= event.end_date %></p>
+              </div>
+              <div class="column is-1">
+              </div>
+              <div class="column">
+                <strong><%= link_to event_path(event) do %><%= event.name %><% end %></strong><br>
+                <small><%= event.location %></small>
+              </div>
+          </article>
 
+   			</div>
         <% if user_signed_in? %>
    			<nav class="level">
    				<div class="level-left is-mobile">
