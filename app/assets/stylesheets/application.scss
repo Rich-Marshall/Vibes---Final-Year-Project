@@ -15,6 +15,11 @@
  */
 
 
+$size-1: 7rem;
+
+
+@import 'bulma';
+
 
 .center {
     display: flex;
@@ -32,12 +37,14 @@ img {
 }
 
 
+
+
 html {
 background-color:rgba(241, 213, 28, 0.24);
 height: 100%;
 }
 
 
-@import 'bulma';
+
 
 //LIGHT YELLOW rgba(241, 213, 28, 0.24)
