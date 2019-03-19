@@ -1,7 +1,7 @@
 # Vibes
 
 Vibes is an event planning and communication tool for music promoters and artists to connect with each other and post to the general public.
-Artists and promoters can manage events and promote them through the dedicated platform. This system fills a much needed gap because the music industry is still using the rapidly declining and not industry specific  "Facebook Events" 
+Artists and promoters can manage events and promote them through the dedicated platform. This system fills a much needed gap because the music industry is still using the rapidly declining and not industry specific  "Facebook Events"
 
 ## Installation for development
 
@@ -35,7 +35,8 @@ gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## Code use
-Users are welcome to use code snippets as they please; assuming all usage is credited to (https://github.com/Rich-Marshall)
+Users are welcome to use code snippets as they please; assuming all usage is credited to [Rich Marshall](https://github.com/Rich-Marshall)
 
 ## Organisation
 [DMU](https://www.dmu.ac.uk/home.aspx)
+De'Montfort Univerity Leicester
