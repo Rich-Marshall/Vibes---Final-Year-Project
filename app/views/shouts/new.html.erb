@@ -1,21 +1,20 @@
+<body>
 <div class="section">
 	<div class="container">
 		<div class="columns is-centered">
 			<div class="column is-half">
-				<h1 class="title">Create a Shout</h1>
+				<h1 class="title">Create Shout</h1>
 					<%= render 'form', shout: @shout %>
+					<br>
+					<p class="control">
+						<%= link_to 'Cancel', shouts_path, class: "button is-dark is-rounded" %>
+					</p>
+					<br>
+					<br>
+					<br>
+					<br>
 			</div>
 		</div>
 	</div>
 </div>
-
-<nav class="navbar is-fixed-bottom">
-	<div class="navbar-menu">
-		<div class="navbar-item">
-			<div class="field is-grouped">
-				<p class="control">
-					<%= link_to 'Cancel', shouts_path, class: "button is-dark is-rounded" %>
-				</p>
-		</div>
-	</div>
-</nav>
+</body>
