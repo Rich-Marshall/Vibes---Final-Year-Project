@@ -14,3 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).on('click', '.delete', function(){
+    $('.close-notification').fadeOut(); // could use .remove(), .slideUp() etc
+});
