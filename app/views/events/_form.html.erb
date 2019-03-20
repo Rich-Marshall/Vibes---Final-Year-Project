@@ -15,7 +15,10 @@
     </div>
     <div class="control">
       <p>
-      <%= f.file_field :cover, label: "Upload an image ", input: { class: "file-input"}, span: { class: "file-cta"}, label_html: {class: "label"}, wrapper: false, autofocus: true %>
+        <label class="label">Upload an image</label>
+      </p>
+      <p>
+        <%= f.file_field :cover, label: "Upload an image ", input_html: { class: "input"}, label_html: {class: "label"}, wrapper: false, autofocus: true %>
       </p>
 
       <!-- <div class="file has-name is-right is-fullwidth">

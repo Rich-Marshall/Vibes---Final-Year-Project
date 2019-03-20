@@ -1,4 +1,16 @@
 <div class="column is-half">
+  <% if user_signed_in? %>
+  <article class="media box">
+    <figure class="media-left">
+      <p class="image is-64x64">
+        <%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name) %>
+      </p>
+    </figure>
+    <div class="media-content">
+      <%= render :partial => 'shouts/form' %>
+    </div>
+  </article>
+  <% end %>
 
 <% @events.each do | event | %>
   <div class="box">
