@@ -11,18 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190312152255) do
+ActiveRecord::Schema.define(version: 20190320112714) do
 
   create_table "events", force: :cascade do |t|
     t.string   "name"
     t.date     "start_date"
     t.date     "end_date"
-    t.string   "cover_img"
+    t.string   "cover_filename"
     t.string   "location"
     t.text     "description"
     t.string   "host"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.integer  "user_id"
   end
 
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20190312152255) do
     t.datetime "updated_at",                          null: false
     t.string   "name"
     t.string   "username"
-    t.string  "tel"
+    t.integer  "tel"
     t.string   "location"
     t.string   "genre"
     t.string   "website"

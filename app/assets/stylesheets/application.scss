@@ -16,7 +16,7 @@
 
 
 $size-1: 7rem;
-
+$size-2: 4rem;
 
 @import 'bulma';
 
@@ -32,10 +32,10 @@ img {
   }
 
 
+
 .notification:not(:last-child) {
   margin-bottom: 0;
 }
-
 
 
 

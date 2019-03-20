@@ -18,7 +18,7 @@
 
 <p>
   <strong>Cover img:</strong>
-  <%= @event.cover_img %>
+  <%= image_tag "event_img/#{@event.id}/cover/#{@event.cover_filename}" if @event.cover_filename? %>
 </p>
 
 <p>

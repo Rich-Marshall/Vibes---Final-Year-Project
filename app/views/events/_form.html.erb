@@ -14,8 +14,27 @@
       autofocus: true %>
     </div>
     <div class="control">
-      <%= f.input :cover_img, label: "Upload an image ",input_html: { class: "input" }, label_html: {class: "label"}, wrapper: false,
-      autofocus: true %>
+      <p>
+      <%= f.file_field :cover, label: "Upload an image ", input: { class: "file-input"}, span: { class: "file-cta"}, label_html: {class: "label"}, wrapper: false, autofocus: true %>
+      </p>
+
+      <!-- <div class="file has-name is-right is-fullwidth">
+        <label class="file-label">
+          <input class="file-input" type="file" name="cover">
+            <span class="file-cta">
+            <span class="file-icon">
+              <i class="fas fa-upload"></i>
+            </span>
+            <span class="file-label">
+              Choose a file…
+            </span>
+          </span>
+          <span class="file-name">
+            Upload a cover photo
+          </span>
+        </label>
+      </div> -->
+
     </div>
     <div class="control">
       <%= f.input :location, label: "Where? ",input_html: { class: "input" }, label_html: {class: "label"} , wrapper: false,

@@ -27,7 +27,7 @@ gem 'bulma-rails'
 gem 'simple_form'
 gem 'gravatar_image_tag', '~> 1.2'
 gem 'devise', '~> 4.6', '>= 4.6.1'
-
+gem 'carrierwave', '~> 0.10.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
