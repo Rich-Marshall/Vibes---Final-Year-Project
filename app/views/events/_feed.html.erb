@@ -40,7 +40,7 @@
           </article>
 
    			</div>
-        <% if user_signed_in? %>
+        <% if event_author(@event) %>
    			<nav class="level">
    				<div class="level-left is-mobile">
    					<%= link_to edit_event_path(event), class: "level-item" do %>

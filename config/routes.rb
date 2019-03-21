@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/show'
+
   get 'home/new'
 
   get 'home/create'
@@ -7,6 +9,7 @@ Rails.application.routes.draw do
   resources :events
   devise_for :users, :controllers => { registrations: 'registrations' }
   resources :shouts
+  resources :users
 
 
 
