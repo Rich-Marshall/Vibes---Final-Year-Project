@@ -37,10 +37,11 @@
                 <strong><%= link_to event_path(event) do %><%= event.name %><% end %></strong><br>
                 <small><%= event.location %></small>
               </div>
+            </div>
           </article>
 
    			</div>
-        <% if event_author(@event) %>
+        <%# <% if event_author(@event) %>
    			<nav class="level">
    				<div class="level-left is-mobile">
    					<%= link_to edit_event_path(event), class: "level-item" do %>
@@ -51,7 +52,7 @@
    					<% end %>
           </div>
    			</nav>
-        <% end %>
+        <%# <% end %>
    		</div>
    	</article>
   </div>

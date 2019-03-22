@@ -1,0 +1,33 @@
+<% @user_shouts.each do | shout | %>
+
+<div class="box">
+  <article class="media">
+    <div class="media-left">
+      <figure class="image is-64x64">
+        <%= gravatar_image_tag(shout.user.email, size: 64, alt: shout.user.name) %>
+      </figure>
+    </div>
+    <div class="media-content">
+      <div class="content">
+        <strong><%= shout.user.name %></strong><br />
+        <small>@<%= shout.user.username %></small><br/>
+        <p><%= shout.shout %></p>
+      </div>
+
+      <% if user_signed_in? %>
+      <nav class="level">
+        <div class="level-left is-mobile">
+          <%= link_to edit_shout_path(shout), class: "level-item" do %>
+            <span class="icon"><i class="fa fa-pencil" aria-hidden="true" style="color:grey"></i></span>
+          <% end %>
+          <%= link_to shout, method: :delete, data: { confirm: "Are you sure you want to delete this shout?" } do %>
+              <span class="icon"><i class="fa fa-trash-o" aria-hidden="true" style="color:grey"></i></span>
+          <% end %>
+        </div>
+      </nav>
+      <% end %>
+    </div>
+  </article>
+</div>
+
+<% end %>

@@ -1,2 +1,50 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-6">
+
+      <h2 class="title is-5">Your Profile</h2>
+        <%= simple_form_for(@user) do |f| %>
+          <%= f.error_notification %>
+            <p>
+              <div class="columns">
+                <div class="column is-3">
+                  <p><%= gravatar_image_tag(@user.email, size: 64, alt: @user.name) %></p>
+                </div>
+                <div class="column">
+                  <span class="title is-3"><%= @user.name %></span>
+                  <br>
+                  <strong>@<%= @user.username %></strong>
+
+                  <p>
+                    <%= @user.email %>
+                  </p>
+
+                  <p>
+                    <%= @user.tel %>
+                  </p>
+                  <p>
+                    <%= @user.location %>
+                  </p>
+                  <p>
+                    <%= @user.genre %>
+                  </p>
+                  <p>
+                    <%= @user.website %>
+                  </p>
+                </div>
+              </div>
+            </p>
+            <br>
+
+          <% end %>
+
+
+          <%= render :partial => 'shouts/user_shouts' %>
+
+
+
+      </div>
+    </div>
+  </div>
+</section>

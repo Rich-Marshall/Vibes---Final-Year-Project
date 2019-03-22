@@ -11,6 +11,12 @@ Rails.application.routes.draw do
   resources :shouts
   resources :users
 
+  resources  :users do
+    resources :shouts, only: [:index]
+  end
+
+  get 'users/:id/user_shouts' => 'users#user_shouts', :as => :custom_user_shouts
+
 
 
 

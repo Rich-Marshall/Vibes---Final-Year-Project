@@ -64,7 +64,7 @@
           <%= gravatar_image_tag(current_user.email, :alt => current_user.name, :gravatar => { :size => 32 }) %>
           </img>
           <p class="control">
-          <%= link_to current_user.name, edit_user_registration_path, class: "button is-warning" %>
+          <%= link_to current_user.name, user_path(@user.id), class: "button is-warning" %>
           </p>
           <p>
             <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"button is-warning" %>
