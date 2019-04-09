@@ -30,6 +30,7 @@ gem 'better_errors', '~> 2.4'
 gem 'guard', '~> 2.15'
 gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
 gem 'carrierwave', '~> 0.10.0'
+active admin will be reinstalled
 ```
 
 ## Contributing
