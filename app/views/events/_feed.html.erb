@@ -26,7 +26,7 @@
    				<small>@<%= event.user.username %></small><br/>
           <br>
           <article class="box">
-       			<%= image_tag "event_img/#{event.id}/cover/#{event.cover_filename}" %>
+       			<%= link_to event_path(event) do %><%= image_tag "event_img/#{event.id}/cover/#{event.cover_filename}" %><% end %>
             <div class="columns">
               <div class="column is-one-quarter">
                 <p><%= event.start_date %> <%= event.end_date %></p>
@@ -41,7 +41,7 @@
           </article>
 
    			</div>
-        <%# <% if event_author(@event) %>
+        <% if event_author(event) %>
    			<nav class="level">
    				<div class="level-left is-mobile">
    					<%= link_to edit_event_path(event), class: "level-item" do %>
@@ -52,7 +52,7 @@
    					<% end %>
           </div>
    			</nav>
-        <%# <% end %>
+        <% end %>
    		</div>
    	</article>
   </div>

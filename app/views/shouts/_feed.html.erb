@@ -27,7 +27,7 @@
    				<p><%= shout.shout %></p>
    			</div>
 
-        <% if user_signed_in? %>
+        <% if shout_author(shout) %>
    			<nav class="level">
    				<div class="level-left is-mobile">
    					<%= link_to edit_shout_path(shout), class: "level-item" do %>

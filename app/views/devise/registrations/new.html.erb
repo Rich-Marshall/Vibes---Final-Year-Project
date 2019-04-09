@@ -42,7 +42,7 @@
 
     <div class="field">
       <div class="control">
-        <%= f.input :tel, required: true, input_html: { class: "input" }, wrapper: false, label_html: { class: "label" } %>
+        <%= f.input :tel, required: false, input_html: { class: "input" }, wrapper: false, label_html: { class: "label" } %>
       </div>
     </div>
 
@@ -60,10 +60,12 @@
 
     <div class="field">
       <div class="control">
-        <%= f.input :website, required: true, input_html: { class: "input" }, wrapper: false, label_html: { class: "label" } %>
+        <%= f.input :website, required: false, input_html: { class: "input" }, wrapper: false, label_html: { class: "label" }, hint: "Ensure full url is copied" %>
       </div>
     </div>
-
+		<br>
+		<div class="title is-7"> * Denotes required field </div>
+		<br>
 
 		<div class="field">
 			<div class="control">

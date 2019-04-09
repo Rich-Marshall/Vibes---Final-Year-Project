@@ -1,40 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= stylesheet_link_tag "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
+</head>
+<body>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-6">
 
-<p id="notice"><%= notice %></p>
+      <h2 class="title is-3"><%= @event.name %></h2>
+      <p class="subtitle is-4">Co-hosts: <%= @event.host %> </p>
+        <%= simple_form_for(@event) do |f| %>
+          <%= f.error_notification %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @event.name %>
-</p>
+              <div class="columns">
 
-<p>
-  <strong>Start date:</strong>
-  <%= @event.start_date %>
-</p>
+                <div class="column">
+                  <%= image_tag "event_img/#{@event.id}/cover/#{@event.cover_filename}" if @event.cover_filename? %>
 
-<p>
-  <strong>End date:</strong>
-  <%= @event.end_date %>
-</p>
+                  <p class="subtitle is-4"><%= @event.start_date %>|<%= @event.end_date %></p>
+                  <p class="title is-"><i class="fa fa-map-marker" aria-hidden="true"></i> <%= @event.location %></p>
+                  <br>
+                  <%= @event.description %>
 
-<p>
-  <strong>Cover img:</strong>
-  <%= image_tag "event_img/#{@event.id}/cover/#{@event.cover_filename}" if @event.cover_filename? %>
-</p>
+                </div>
+              </div>
 
-<p>
-  <strong>Location:</strong>
-  <%= @event.location %>
-</p>
+            <br>
 
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
+          <% end %>
 
-<p>
-  <strong>Host:</strong>
-  <%= @event.host %>
-</p>
+          <br>
+          <% if event_author(@event) %>
+          <%= link_to 'Edit', edit_event_path(@event), class: "button is-dark is-rounded" %> |
+          <% end %>
+          <%= link_to 'Back', url_for(:back), class: "button is-dark is-rounded" %>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
