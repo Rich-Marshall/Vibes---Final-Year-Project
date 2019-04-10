@@ -51,6 +51,11 @@
  			  <div class="field is-grouped">
 
           <% if user_signed_in? %>
+            <% if current_user.admin? %>
+              <p class="control">
+                <%= link_to 'Admin Tools', rails_admin.dashboard_path, class: "button is-warning is-inverted is-rounded" %>
+              </p>
+            <% end %>
           <p class="control">
             <%= link_to 'View Shouts', root_path, class: "button is-warning is-inverted is-rounded" %>
           </p>
