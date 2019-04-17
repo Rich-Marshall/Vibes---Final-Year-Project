@@ -3,7 +3,9 @@ class UsersController < ApplicationController
   def index
     @shouts = Shout.where(user_id: current_user)
     @shout = Shout.new
+    @users = User.all
   end
+
 
 
   def show

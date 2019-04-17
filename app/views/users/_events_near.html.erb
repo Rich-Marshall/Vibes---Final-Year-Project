@@ -1,0 +1,25 @@
+<div class="column">
+ 	<nav class="panel">
+ 		<p class="panel-heading">Events In Your Area</p>
+
+<% @events.each do | event | %>
+ 	<div class="panel-block">
+ 		<article class="media">
+ 			<div class="media-left">
+ 				<figure class="image is-32x32">
+ 					<%= gravatar_image_tag(event.user.email, size: 64, alt: event.user.name) %>
+ 				</figure>
+ 			</div>
+ 			<div class="media-content">
+ 				<div class="content">
+            <strong><%= link_to user_path(event.user) do %><%= event.user.name %><% end %></strong>
+            <small>@<%= event.user.username %></small><br>
+            <%= link_to event_path(event) do %><%= event.name %><% end %><br>
+            <small><%= event.start_date %> <%= event.end_date %></small>
+ 				</div>
+ 			</div>
+ 		</article>
+ 	</div>
+  <% end %>
+ 	</nav>
+</div>
