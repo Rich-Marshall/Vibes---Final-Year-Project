@@ -11,20 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190409113539) do
+ActiveRecord::Schema.define(version: 20190421212332) do
 
   create_table "events", force: :cascade do |t|
     t.string   "name"
     t.date     "start_date"
     t.date     "end_date"
     t.string   "cover_filename"
-    t.string   "location"
+    t.string   "city"
     t.text     "description"
     t.string   "host"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.integer  "user_id"
-    t.string   "city"
+    t.string   "venue"
   end
 
   create_table "shouts", force: :cascade do |t|
@@ -44,11 +44,11 @@ ActiveRecord::Schema.define(version: 20190409113539) do
     t.datetime "updated_at",                             null: false
     t.string   "name"
     t.string   "username"
-    t.integer  "tel"
-    t.string   "location"
+    t.string   "city"
     t.string   "genre"
     t.string   "website"
     t.boolean  "admin",                  default: false
+    t.string   "tel"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

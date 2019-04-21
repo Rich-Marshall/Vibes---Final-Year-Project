@@ -1,9 +1,11 @@
 <div class="column">
  	<nav class="panel">
- 		<p class="panel-heading">Events In Your Area</p>
+    <p class="panel-heading"><strong>Events In Your Area:</strong></p>
+    <p class="panel-heading"><small>Some great events in <%= current_user.city %> for you</small></p>
 
 <% @events.each do | event | %>
- 	<div class="panel-block">
+    <% if current_user.city == event.city %>
+ 	  <div class="panel-block">
  		<article class="media">
  			<div class="media-left">
  				<figure class="image is-32x32">
@@ -20,6 +22,8 @@
  			</div>
  		</article>
  	</div>
+    <% end %>
   <% end %>
+  
  	</nav>
 </div>

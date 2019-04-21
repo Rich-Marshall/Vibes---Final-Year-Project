@@ -10,7 +10,7 @@
       <div class="column is-6">
 
       <h2 class="title is-3"><%= @event.name %></h2>
-      <p class="subtitle is-4">Co-hosts: <%= @event.host %> </p>
+      <p class="subtitle is-4">Co-hosts: @<%= @event.host %> </p>
         <%= simple_form_for(@event) do |f| %>
           <%= f.error_notification %>
 
@@ -20,8 +20,10 @@
                   <%= image_tag "event_img/#{@event.id}/cover/#{@event.cover_filename}" if @event.cover_filename? %>
 
                   <p class="subtitle is-4"><%= @event.start_date %>|<%= @event.end_date %></p>
-                  <p class="title is-"><i class="fa fa-map-marker" aria-hidden="true"></i> <%= @event.location %></p>
+                  <p class="title is-"><i class="fa fa-map-marker" aria-hidden="true"></i> <%= @event.city %></p>
+                  <p class="title is-"><i class="fa fa-home" aria-hidden="true"></i> <%= @event.venue %></p>
                   <br>
+                  <strong>Description:</strong><br>
                   <%= @event.description %>
 
                 </div>

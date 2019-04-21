@@ -1,25 +1,30 @@
+<% @users = User.all %>
 <div class="column">
  	<nav class="panel">
- 		<p class="panel-heading">Artists You Might Like</p>
-    <% @users = User.all %>
+ 		<p class="panel-heading"><strong>Artists you might like:</strong></p>
+    <p class="panel-heading"><small>We know you love <%= current_user.genre %> so have a look</small></p>
     <% @users.each do | user | %>
-    <div class="panel-block">
-      <article class="media">
-        <div class="media-left">
-          <figure class="image is-32x32">
-        	   <%= gravatar_image_tag(user.email, size: 64, alt: user.name) %>
-           </figure>
-         </div>
-         <div class="media-content">
-           <div class="content">
-             <p>
-               <strong><%= link_to user_path(user) do %><%= user.name %><% end %></strong>
-               <small>@<%= user.username %></small>
-             </p>
-           </div>
-         </div>
-      </article>
-    </div>
+      <% unless current_user == user %>
+        <% if current_user.genre == user.genre %>
+        <div class="panel-block">
+        <article class="media">
+          <div class="media-left">
+            <figure class="image is-32x32">
+        	     <%= gravatar_image_tag(user.email, size: 64, alt: user.name) %>
+            </figure>
+          </div>
+          <div class="media-content">
+            <div class="content">
+              <p>
+                <strong><%= link_to user_path(user) do %><%= user.name %><% end %></strong>
+                <small>@<%= user.username %></small>
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+      <% end %>
+    <% end %>
     <% end %>
   </nav>
 </div>

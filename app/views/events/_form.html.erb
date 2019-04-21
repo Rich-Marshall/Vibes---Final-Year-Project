@@ -40,7 +40,11 @@
 
     </div>
     <div class="control">
-      <%= f.input :location, label: "Where? ",input_html: { class: "input" }, label_html: {class: "label"} , wrapper: false,
+      <%= f.input :city, label: "What City? ",input_html: { class: "input" }, label_html: {class: "label"} , wrapper: false,
+      autofocus: true %>
+    </div>
+    <div class="control">
+      <%= f.input :venue, label: "What Venue? ",input_html: { class: "input" }, label_html: {class: "label"} , wrapper: false,
       autofocus: true %>
     </div>
     <div class="control">
