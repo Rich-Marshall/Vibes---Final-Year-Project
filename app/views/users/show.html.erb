@@ -19,10 +19,14 @@
                   <p><%= gravatar_image_tag(@user.email, size: 64, alt: @user.name) %></p>
                 </div>
                 <div class="column">
-                  <span class="title is-3"><%= @user.name %></span>
+                  <span class="title is-3"><%= @user.name %>  </span>
+                  <% if user_signed_in? && current_user == @user %>
+                  <span class="title is-3">| </span>
+                  <%= link_to 'Edit Profile', edit_user_registration_path(current_user), class: "button is-dark is-rounded" %>
+                  <% end %>
                   <br>
                   <strong>@<%= @user.username %></strong>
-                  
+
                   <p>
                     <%= @user.location %>
                   </p>
@@ -47,6 +51,7 @@
 
           <%= render :partial => 'events/user_events' %>
           <br>
+
 
 
           <%= link_to 'Back', url_for(:back), class: "button is-dark is-rounded" %>

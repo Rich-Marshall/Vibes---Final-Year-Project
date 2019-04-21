@@ -7,6 +7,8 @@ class ShoutsController < ApplicationController
   def index
     @shouts = Shout.all.order("created_at DESC")
     @shout = Shout.new
+    @event = Event.new
+    @events = Event.all.order("created_at DESC")
   end
 
   # GET /shouts/1
