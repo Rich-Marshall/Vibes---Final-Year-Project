@@ -4,8 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-         has_many :shouts
-         has_many :events
+         has_many :shouts, dependent: :destroy
+         has_many :events, dependent: :destroy
 
          validates :name, :username, :genre, :city,  :tel, :presence => { :message => "cant be blank"}
          validates :username, :email, :tel, uniqueness: true, uniqueness: { :message => "must be unique"}

@@ -1,9 +1,24 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Shout:</strong>
-  <%= @shout.shout %>
-</p>
-
-<%= link_to 'Edit', edit_shout_path(@shout) %> |
-<%= link_to 'Back', shouts_path %>
+<body>
+<div class="section">
+	<div class="container">
+		<div class="columns is-centered">
+			<div class="column is-half">
+				<h1 class="title">Confirm?</h1>
+        <p>
+          <strong><%= @shout.shout %></strong>
+        
+        </p>
+					<br>
+					<p class="control">
+						<%= link_to 'Cancel', edit_shout_path(@shout), class: "button is-dark is-rounded" %> |
+            <%= link_to 'Confirm', shouts_path, class: "button is-dark is-rounded" %>
+					</p>
+					<br>
+					<br>
+					<br>
+					<br>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
