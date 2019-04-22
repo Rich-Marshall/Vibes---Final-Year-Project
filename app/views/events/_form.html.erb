@@ -47,6 +47,13 @@
       <%= f.input :venue, label: "What Venue? ",input_html: { class: "input" }, label_html: {class: "label"} , wrapper: false,
       autofocus: true %>
     </div>
+
+    <div class="field">
+      <div class="control">
+        <%= f.input :ticket, label: "Ticket link", required: false, input_html: { class: "input" }, wrapper: false, label_html: { class: "label" },  hint: "Ensure full url is copied (must include https://)"  %>
+      </div>
+    </div>
+
     <div class="control">
       <%= f.input :description, input_html: { class: "textarea" }, label_html: {class: "label"}, placeholder: "whats's it all about? ", wrapper: false,
       autofocus: true %>

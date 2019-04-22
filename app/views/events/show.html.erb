@@ -23,6 +23,11 @@
                   <p class="title is-"><i class="fa fa-map-marker" aria-hidden="true"></i> <%= @event.city %></p>
                   <p class="title is-"><i class="fa fa-home" aria-hidden="true"></i> <%= @event.venue %></p>
                   <br>
+
+                  <strong>Ticket Link:</strong>
+                  <%= link_to @event.ticket, @event.ticket %>
+                  <br>
+                  <br>
                   <strong>Description:</strong><br>
                   <%= @event.description %>
 

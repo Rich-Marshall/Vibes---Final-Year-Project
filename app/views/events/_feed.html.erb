@@ -26,6 +26,16 @@
    				<small>@<%= event.user.username %></small><br/>
           <br>
           <article class="box">
+
+
+            <% if event.start_date.present? && event.start_date < Date.today %>
+            <section class="hero is-small is-warning has-text-centered">
+              <div class="hero-body">
+                  <strong>This event has passed</strong>
+              </div>
+            </section>
+            <% end %>
+
        			<%= link_to event_path(event) do %><%= image_tag "event_img/#{event.id}/cover/#{event.cover_filename}" %><% end %>
             <div class="columns">
               <div class="column is-one-quarter">

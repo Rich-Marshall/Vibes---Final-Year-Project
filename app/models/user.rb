@@ -4,6 +4,19 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-has_many :shouts
-has_many :events
+         has_many :shouts
+         has_many :events
+
+         validates :name, :username, :genre, :city,  :tel, :presence => { :message => "cant be blank"}
+         validates :username, :email, :tel, uniqueness: true, uniqueness: { :message => "must be unique"}
+         validates :tel, :length => { :is => 11, :message => "must be 11 digits"}
+
+    def genre=(s)
+      super s.titleize
+    end
+
+    def city=(s)
+      super s.titleize
+    end
+
 end

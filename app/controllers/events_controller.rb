@@ -6,6 +6,7 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all.order("created_at DESC")
+    @user_events = Event.all.order("created_at DESC")
     @event = Event.new
     @shout = Shout.new
   end
@@ -72,6 +73,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:name, :start_date, :end_date, :cover, :city, :venue, :description, :host)
+      params.require(:event).permit(:name, :start_date, :end_date, :cover, :city, :venue, :description, :host, :ticket)
     end
 end
