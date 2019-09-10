@@ -36,9 +36,16 @@
                   <p>
                     <%= link_to @user.website, @user.website %>
                   </p>
-                </div>
-              </div>
 
+                </div>
+
+              </div>
+              <p>
+                <% if user_signed_in? && current_user == @user %>
+                <%= link_to 'Create Event', new_event_path, class: "button is-dark is-rounded" %> |
+                <%= link_to 'Add Shout', root_path, class: "button is-dark is-rounded" %>
+                <% end %>
+              </p>
             <br>
 
           <% end %>
