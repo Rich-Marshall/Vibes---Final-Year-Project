@@ -41,4 +41,4 @@ Users are welcome to use code snippets as they please; assuming all usage is cre
 
 ## Organisation
 [DMU](https://www.dmu.ac.uk/home.aspx)
-De'Montfort Univerity Leicester
+De'Montfort University Leicester
