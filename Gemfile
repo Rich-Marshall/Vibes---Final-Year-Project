@@ -26,7 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bulma-rails'
 gem 'simple_form'
 gem 'gravatar_image_tag', '~> 1.2'
-gem 'devise', '~> 4.6', '>= 4.6.1'
+gem 'devise', '~> 4.7'
 gem 'carrierwave', '~> 0.10.0'
 
 gem 'rails_admin'
