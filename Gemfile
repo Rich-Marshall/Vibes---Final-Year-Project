@@ -27,7 +27,7 @@ gem 'bulma-rails'
 gem 'simple_form'
 gem 'gravatar_image_tag', '~> 1.2'
 gem 'devise', '~> 4.6', '>= 4.6.1'
-gem 'carrierwave', '~> 0.10.0'
+gem 'carrierwave', '~> 1.3.2'
 
 gem 'rails_admin'
 # gem 'bcrypt', '~> 3.1.7'
